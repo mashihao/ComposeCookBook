@@ -88,7 +88,7 @@ fun HomeScreen(
         modifier = Modifier.testTag(TestTags.HOME_SCREEN_ROOT),
         topBar = {
             SmallTopAppBar(
-                title = { Text(text = "Compose CookBook") },
+                title = { Text(text = "Small Top AppBar") },
                 actions = {
                     IconButton(onClick = {
                         appThemeState.value = appThemeState

@@ -1,5 +1,7 @@
 package com.guru.composecookbook.ui.home.dynamic
 
+import android.util.Log
+import android.widget.Toast
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
 import androidx.compose.foundation.gestures.detectTapGestures
@@ -72,7 +74,10 @@ fun HowToModifiers() {
         DemoText("Modifier.align(Alignment.CenterHorizontally)")
         DemoElementButton(modifier = Modifier.align(Alignment.CenterHorizontally))
         DemoText("Modifier.align(Alignment.End)")
-        DemoElementButton(modifier = Modifier.align(Alignment.End))
+        DemoElementButton(modifier = Modifier.align(Alignment.End).background(Color.Red).clickable {
+            Log.e("MSH","click")
+
+        }.fillMaxWidth())
 
         DemoText("Modifier.alpha0.5f)")
         DemoElementButton(modifier = Modifier.alpha(0.5f))
@@ -130,7 +135,6 @@ fun HowToModifiers() {
                 .clickable(onClick = {})
                 .background(teal200)
                 .padding(8.dp)
-
         )
         DemoText("Add double tap: Modifier.pointerInteropFilter for tap and motion events ")
         DemoElementText(modifier = Modifier
@@ -153,7 +157,9 @@ fun HowToModifiers() {
 
 @Composable
 fun DemoElementButton(modifier: Modifier) {
-    Button(onClick = {}, modifier = modifier) {
+    Button(onClick = {
+
+    }, modifier = modifier) {
         Text(text = "Basic Button")
     }
 }

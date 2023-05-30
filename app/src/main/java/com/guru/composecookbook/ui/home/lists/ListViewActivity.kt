@@ -20,9 +20,11 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import com.guru.composecookbook.R
 import com.guru.composecookbook.data.DemoDataProvider
 import com.guru.composecookbook.instagram.components.stories.StoryList
@@ -95,6 +97,12 @@ fun ListViewContent(listType: String, onBack: () -> Unit) {
                     }
                 },
             )
+        },
+        floatingActionButton = {
+
+            Button(onClick = { }) {
+                Text(text = "gagaga",color= Color.Red, fontSize = 22.sp)
+            }
         },
         content = { paddingValues ->
             ListViewScreen(
@@ -217,13 +225,15 @@ private fun ListItemDivider() {
 }
 
 
-@Preview(showBackground = true)
+@Preview(showBackground = false)
 @Composable
 fun DefaultPreview2() {
     ComposeCookBookTheme {
         ListViewContent(
             ListViewType.VERTICAL.name,
-            onBack = {},
+            onBack = {
+
+            },
         )
     }
 }

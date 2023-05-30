@@ -297,9 +297,9 @@ fun ConstraintLayouts() {
 
 @Composable
 fun MultipleTexts() {
-    Text(text = "First", modifier = Modifier.padding(8.dp))
-    Text(text = "Second", modifier = Modifier.padding(8.dp))
-    Text(text = "Third", modifier = Modifier.padding(8.dp))
+    Text(text = "First", modifier = Modifier.padding(18.dp))
+    Text(text = "Second", modifier = Modifier.padding(18.dp))
+    Text(text = "Third", modifier = Modifier.padding(18.dp))
 
 }
 
